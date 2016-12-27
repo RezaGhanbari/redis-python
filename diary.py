@@ -9,7 +9,7 @@ database = Database(host='localhost', port=6379, db=0)
 
 class Entry(Model):
     database = database
-    namespace = 'my_diary'
+    namespace = 'diary'
 
     content = TextField(fts=True)
     timestamp = DateTimeField(default=datetime.datetime.now, index=True)
